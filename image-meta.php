@@ -126,6 +126,17 @@ function image_meta_actions() {
   add_filter('attachment_fields_to_edit', 'image_meta_form_fields', 1, 2);
   register_setting('image-meta-options', 'image-meta');
 }
+function image_meta_default_settings() {
+  if (!get_option('image-meta')) {
+    $defaults = array('title' => 'filename',
+                      'alttext' => 'caption',
+                      'caption' => 'caption',
+                      'description' => 'caption'
+                     );
+    update_option('image-meta', $defaults);
+  }
+}
+register_activation_hook(__FILE__, 'image_meta_default_settings');
 add_action('admin_init', 'image_meta_actions');
 add_action('admin_menu', 'image_meta_settings_page');
 ?>
