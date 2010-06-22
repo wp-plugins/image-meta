@@ -17,7 +17,15 @@ Adds a filter so that when you upload a picture, all image meta information is f
 
 Activate the plugin. Configure options in the Image Meta Settings page.
 
+== Screenshots ==
+
+1. available options
+
 == Frequently Asked Questions ==
+
+= Is Image meta compatible with Faster image insert? =
+
+yes.
 
 == CHANGELOG ==
 
